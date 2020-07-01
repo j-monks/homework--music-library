@@ -31,8 +31,6 @@ album2 = Album.new({
 })
 album2.save()
 
-artist1 = {"name" => "John Smith"}
-artist1.update()
 
 binding.pry
 nil
