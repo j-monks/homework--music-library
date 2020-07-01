@@ -9,11 +9,13 @@ Artist.delete_all()
 artist1 = Artist.new({
     "name" => "Johnny Cash"
 })
+
 artist1.save()
 
 artist2 = Artist.new({
     "name" => "alt-J"
 })
+
 artist2.save()
 
 # ALBUMS
@@ -22,6 +24,7 @@ album1 = Album.new({
     "genre" => "Rock",
     "artist_id" => artist1.id
 })
+
 album1.save()
 
 album2 = Album.new({
@@ -29,7 +32,20 @@ album2 = Album.new({
     "genre" => "Alternative/Indie",
     "artist_id" => artist2.id
 })
+
 album2.save()
+
+album1.delete()
+
+artist1.delete()
+
+all_the_artists = Artist.all()
+
+all_the_albums = Album.all()
+
+alt_j = Artist.find(artist2.id)
+
+reduxer = Album.find(album2.id)
 
 
 binding.pry
