@@ -31,7 +31,5 @@ album2 = Album.new({
 })
 album2.save()
 
-album1.delete()
-
 binding.pry
 nil
